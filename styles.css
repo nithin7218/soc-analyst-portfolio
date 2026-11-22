@@ -538,20 +538,35 @@ h1 span {
   border-radius: 50%;
 }
 
+.statement-signal::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(29, 107, 76, 0.32);
+  border-radius: 50%;
+  animation: positioning-ping 2.8s ease-out infinite 1.4s;
+}
+
 .statement-signal span {
   position: absolute;
   inset: 12px;
-  border: 1px solid rgba(29, 107, 76, 0.28);
+  border: 1px solid rgba(29, 107, 76, 0.4);
   border-radius: 50%;
+  animation: positioning-ping 2.8s ease-out infinite;
+}
+
+@keyframes positioning-ping {
+  0% { transform: scale(0.75); opacity: 0.85; }
+  100% { transform: scale(1.45); opacity: 0; }
 }
 
 .statement-signal i {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: conic-gradient(from 0deg, transparent 0 295deg, rgba(29, 107, 76, 0.28) 330deg, rgba(29, 107, 76, 0.04) 360deg);
+  background: conic-gradient(from 0deg, transparent 0 295deg, rgba(29, 107, 76, 0.5) 330deg, rgba(29, 107, 76, 0.08) 360deg);
   mask: radial-gradient(circle, transparent 43%, #000 44%, #000 49%, transparent 50%);
-  animation: orbit-rotate 6s linear infinite;
+  animation: orbit-rotate 4.8s linear infinite;
 }
 
 .statement-signal b {
